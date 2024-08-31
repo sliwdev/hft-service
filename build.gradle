@@ -25,11 +25,11 @@ repositories {
 
 dependencies {
     annotationProcessor 'io.micronaut:micronaut-http-validation'
-    annotationProcessor 'io.micronaut.serde:micronaut-serde-processor'
-    implementation 'io.micronaut.serde:micronaut-serde-jackson'
-    compileOnly 'io.micronaut:micronaut-http-client'
+    annotationProcessor 'io.micronaut.validation:micronaut-validation-processor'
+    implementation 'io.micronaut:micronaut-jackson-databind'
+    implementation 'io.micronaut.validation:micronaut-validation'
+    implementation 'io.micronaut.reactor:micronaut-reactor'
     runtimeOnly 'ch.qos.logback:logback-classic'
-    testImplementation 'io.micronaut:micronaut-http-client'
 }
 
 graalvmNative.toolchainDetection = false
